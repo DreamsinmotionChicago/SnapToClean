@@ -31,6 +31,12 @@ body {
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat, no-repeat;
   background-attachment: fixed, fixed, fixed, fixed, fixed, fixed, fixed;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
@@ -98,10 +104,22 @@ h1, h2, h3, h4 {
   box-shadow: 12px 12px 0 rgba(4, 56, 74, 0.18);
 }
 
+.hero-with-bg {
+  border-radius: 36px;
+  border: 4px solid var(--comic-navy);
+  box-shadow: 12px 12px 0 rgba(4, 56, 74, 0.18);
+}
+
 .pricing-highlight {
   background-image: radial-gradient(circle at 15% 20%, rgba(129, 199, 132, 0.8), transparent 65%),
     radial-gradient(circle at 90% 10%, rgba(76, 175, 80, 0.5), transparent 60%),
     linear-gradient(135deg, rgba(4, 56, 74, 0.95), rgba(46, 125, 50, 0.9));
+  border: 4px solid var(--comic-navy);
+  color: white;
+  box-shadow: 12px 12px 0 rgba(4, 56, 74, 0.2);
+}
+
+.pricing-with-bg {
   border: 4px solid var(--comic-navy);
   color: white;
   box-shadow: 12px 12px 0 rgba(4, 56, 74, 0.2);

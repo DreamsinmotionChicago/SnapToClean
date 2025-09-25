@@ -13,17 +13,17 @@ export default function StickyCTA() {
   };
   return (
     <div className="sticky-cta">
-      <div className="container mx-auto">
-        <div className="flex items-center gap-3">
-          <div className="relative flex h-28 w-28 md:h-32 md:w-32 flex-shrink-0 items-center justify-center rounded-[20px] bg-transparent p-2">
-            <Image src="/brand/logo-green.png" alt={`${BRAND.name} logo`} fill sizes="(max-width: 768px) 112px, 128px" style={{ objectFit: 'contain' }} />
+      <div className="container mx-auto px-3">
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="relative flex h-20 w-20 md:h-32 md:w-32 flex-shrink-0 items-center justify-center rounded-[20px] bg-transparent p-2">
+            <Image src="/brand/logo-green.png" alt={`${BRAND.name} logo`} fill sizes="(max-width: 768px) 80px, 128px" style={{ objectFit: 'contain' }} />
           </div>
-          <div className="relative flex-1">
+          <div className="relative flex-1 min-w-0">
             <button
               onClick={() => setShowDropdown(!showDropdown)}
-              className="btn btn-ghost w-full text-xs px-3 py-2 flex items-center justify-center gap-1"
+              className="btn btn-ghost w-full text-xs px-2 md:px-3 py-2 flex items-center justify-center gap-1"
             >
-              CALL/TEXT FOR THE CREW
+              <span className="truncate">CALL/TEXT FOR THE CREW</span>
               <span className="text-xs">▼</span>
             </button>
             {showDropdown && (
@@ -37,7 +37,10 @@ export default function StickyCTA() {
               </div>
             )}
           </div>
-          <button onClick={scrollToForm} className="btn btn-primary flex-1 text-xs px-3 py-2">Smash That Estimate</button>
+          <button onClick={scrollToForm} className="btn btn-primary text-xs px-2 md:px-3 py-2 flex-shrink-0">
+            <span className="hidden sm:inline">Smash That Estimate</span>
+            <span className="sm:hidden">Get Quote</span>
+          </button>
         </div>
       </div>
     </div>

@@ -99,27 +99,33 @@ export default function Page() {
   return (
     <div className="space-y-8 md:space-y-12">
       {/* HERO */}
-      <section className="hero-gradient space-y-6 px-6 py-10 text-center relative overflow-hidden">
-        <PaperShader variant="paper" className="rounded-[36px]" />
-        <div className="comic-panel mx-auto inline-flex items-center gap-2 rounded-full bg-[#83f2c5] px-4 py-2 text-sm font-extrabold uppercase text-[#04384a] relative z-10">
+      <section className="hero-with-bg space-y-6 px-6 py-10 text-center relative overflow-hidden">
+        <div className="absolute inset-0 rounded-[36px] overflow-hidden z-10">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{backgroundImage: 'url(/backgrounds/basement-garage-bg.jpg?v=1)'}}
+          />
+        </div>
+        <div className="comic-panel mx-auto inline-flex items-center gap-2 rounded-full bg-[#04384a]/80 px-4 py-2 text-sm font-extrabold uppercase text-white relative z-10">
           ⚡ Same-day junk justice anywhere in Chicago
         </div>
-        <h1 className="comic-outline mx-auto max-w-3xl text-4xl font-bold uppercase text-[#04384a] md:text-6xl relative z-10">{COPY.heroTitle}</h1>
-        <p className="mx-auto max-w-2xl text-base font-semibold text-[#04384a]/85 md:text-lg relative z-10">
+        <h1 className="comic-outline mx-auto max-w-3xl text-4xl font-bold uppercase text-white md:text-6xl relative z-10">{COPY.heroTitle}</h1>
+        <p className="mx-auto max-w-2xl text-base font-semibold text-white/90 md:text-lg relative z-10">
           {COPY.heroSub} Snap To Clean brings the muscle, the trucks, and the good vibes — you just point at the clutter.
         </p>
-        <div className="comic-panel mx-auto inline-block rounded-2xl bg-white px-5 py-3 text-sm font-bold uppercase text-[#04384a] relative z-10">
+        <div className="comic-panel mx-auto inline-block rounded-2xl bg-[#04384a]/80 px-5 py-3 text-sm font-bold uppercase text-white relative z-10">
           💡 {COPY.truckSizeNote}
         </div>
       </section>
 
       {/* PRICING TABLE */}
-      <section className="card pricing-highlight relative overflow-hidden">
-        <PaperShader
-          variant="grain"
-          colors={['#04384a', '#0fa3b1', '#2ec4b6']}
-          className="rounded-[32px] opacity-30"
-        />
+      <section className="card pricing-with-bg relative overflow-hidden">
+        <div className="absolute inset-0 rounded-[32px] overflow-hidden z-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{backgroundImage: 'url(/backgrounds/pricing-bg.png?v=1)'}}
+          />
+        </div>
         <div className="mb-6 flex flex-wrap items-center gap-3 text-white relative z-10">
           <div className="comic-panel inline-flex items-center gap-2 rounded-full bg-[#0fa3b1] px-4 py-2 text-sm font-extrabold uppercase text-white">
             💰 Transparent Pricing

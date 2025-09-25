@@ -30,16 +30,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className="min-h-screen text-[#04384a]">
-        <Analytics />
-        <StickyCTA />
-        <Header />
-        <main className="container mx-auto max-w-5xl px-4 py-10 md:py-16">{children}</main>
+        <div className="w-full">
+          <Analytics />
+          <StickyCTA />
+          <Header />
+          <main className="container mx-auto max-w-5xl px-4 py-10 md:py-16">{children}</main>
+        </div>
         <footer className="mt-16 border-t-4 border-white/40 bg-[#04384a] text-white">
           <div className="container mx-auto max-w-5xl px-4 py-12">
             <div className="grid gap-10 md:grid-cols-[2fr_1fr]">
