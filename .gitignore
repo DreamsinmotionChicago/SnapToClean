@@ -6,3 +6,14 @@ dist
 *.log
 *.local
 .DS_Store
+
+# Replit configuration files
+.replit
+replit.nix
+.config/
+.upm/
+.cache/
+.breakpoints
+
+# Temporary storage
+tempstorage/
