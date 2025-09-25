@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --comic-navy: #04384a;
+  --comic-teal: #0fa3b1;
+  --comic-aqua: #2ec4b6;
+  --comic-mint: #83f2c5;
+  --comic-pop: #b6ff7a;
+  --comic-foam: #e6fff7;
+}
+
+body {
+  font-feature-settings: 'ss01' 1;
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Segoe UI', sans-serif;
+  color: var(--comic-navy);
+  background-color: var(--comic-foam);
+  background-image:
+    linear-gradient(180deg, rgba(15, 163, 177, 0.18), rgba(46, 196, 182, 0.12)),
+    radial-gradient(circle at 25% 20%, rgba(131, 242, 197, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(11, 72, 94, 0.15) 0%, transparent 55%),
+    radial-gradient(circle at 15% 85%, rgba(182, 255, 122, 0.15) 0%, transparent 55%),
+    repeating-radial-gradient(circle at center, rgba(4, 56, 74, 0.06) 0, rgba(4, 56, 74, 0.06) 1px, transparent 1px, transparent 12px),
+    url('/backgrounds/hero-yard.jpg'),
+    url('/backgrounds/crew-yard.jpg');
+  background-size: cover, 120% 120%, 140% 140%, 160% 160%, 20px 20px, cover, cover;
+  background-position: center, 0 0, 100% 0, 0 100%, 0 0, center 80%, center bottom;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat, no-repeat;
+  background-attachment: fixed, fixed, fixed, fixed, fixed, fixed, fixed;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bangers', 'Comic Neue', cursive;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.card {
+  @apply rounded-[32px] border-4 bg-white p-6 shadow-xl;
+  border-color: var(--comic-navy);
+  box-shadow: 10px 12px 0 rgba(4, 56, 74, 0.16);
+  background-image: linear-gradient(135deg, rgba(15, 163, 177, 0.12), rgba(131, 242, 197, 0.12));
+}
+
+.chip {
+  @apply inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 text-xs font-bold uppercase tracking-wide transition-transform;
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--comic-navy);
+  color: var(--comic-navy);
+  box-shadow: 4px 4px 0 rgba(4, 56, 74, 0.18);
+}
+.chip-active {
+  background: var(--comic-mint);
+  color: var(--comic-navy);
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wide transition-transform duration-200;
+  border: 3px solid var(--comic-navy);
+  box-shadow: 6px 6px 0 rgba(4, 56, 74, 0.2);
+}
+.btn-primary {
+  background-image: linear-gradient(120deg, var(--comic-teal), var(--comic-pop));
+  color: var(--comic-navy);
+}
+.btn-primary:hover {
+  transform: translate(-2px, -2px) rotate(-1deg);
+}
+.btn-ghost {
+  background: var(--comic-foam);
+  color: var(--comic-navy);
+}
+.btn-ghost:hover {
+  transform: translate(-2px, -2px) rotate(1deg);
+}
+
+.sticky-cta {
+  position: sticky;
+  bottom: 0;
+  backdrop-filter: saturate(180%) blur(12px);
+  background: linear-gradient(180deg, rgba(15, 163, 177, 0), rgba(131, 242, 197, 0.92) 60%);
+  padding-top: 0.75rem;
+  z-index: 40;
+  border-top: 4px solid var(--comic-navy);
+  box-shadow: 0 -8px 0 rgba(4, 56, 74, 0.1);
+}
+
+.hero-gradient {
+  background-image: radial-gradient(circle at top left, rgba(131, 242, 197, 0.5), transparent 70%),
+    radial-gradient(circle at top right, rgba(15, 163, 177, 0.4), transparent 65%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(230, 255, 247, 0.92));
+  border-radius: 36px;
+  border: 4px solid var(--comic-navy);
+  box-shadow: 12px 12px 0 rgba(4, 56, 74, 0.18);
+}
+
+.pricing-highlight {
+  background-image: radial-gradient(circle at 15% 20%, rgba(131, 242, 197, 0.8), transparent 65%),
+    radial-gradient(circle at 90% 10%, rgba(15, 163, 177, 0.5), transparent 60%),
+    linear-gradient(135deg, rgba(4, 56, 74, 0.95), rgba(15, 163, 177, 0.9));
+  border: 4px solid var(--comic-navy);
+  color: white;
+  box-shadow: 12px 12px 0 rgba(4, 56, 74, 0.2);
+}
+
+.progress-bar {
+  background-image: linear-gradient(90deg, var(--comic-teal), var(--comic-pop));
+  box-shadow: 0 3px 0 rgba(4, 56, 74, 0.25);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  border: 3px solid var(--comic-navy);
+  box-shadow: 6px 6px 0 rgba(4, 56, 74, 0.12);
+}
+
+.comic-burst {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background: linear-gradient(135deg, var(--comic-teal), var(--comic-pop));
+  color: var(--comic-navy);
+  clip-path: polygon(50% 0%, 65% 20%, 100% 25%, 75% 50%, 100% 75%, 65% 80%, 50% 100%, 35% 80%, 0% 75%, 25% 50%, 0% 25%, 35% 20%);
+  border: 4px solid var(--comic-navy);
+  box-shadow: 6px 6px 0 rgba(4, 56, 74, 0.18);
+  font-family: 'Bangers', 'Comic Neue', cursive;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.comic-outline {
+  text-shadow: 3px 3px 0 rgba(4, 56, 74, 0.45);
+}
+
+.comic-panel {
+  background: repeating-linear-gradient(-45deg, rgba(4, 56, 74, 0.08), rgba(4, 56, 74, 0.08) 4px, transparent 4px, transparent 12px);
+  border: 3px solid var(--comic-navy);
+  box-shadow: 6px 6px 0 rgba(4, 56, 74, 0.15);
+}
+
+.label-comic {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--comic-navy);
+}
+
+.input-comic {
+  width: 100%;
+  border: 3px solid var(--comic-navy);
+  border-radius: 18px;
+  background: white;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: var(--comic-navy);
+  box-shadow: 4px 4px 0 rgba(4, 56, 74, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.input-comic:focus {
+  outline: none;
+  border-color: var(--comic-teal);
+  box-shadow: 6px 6px 0 rgba(4, 56, 74, 0.22);
+  transform: translate(-2px, -2px);
+}
+
+.checkbox-comic {
+  accent-color: var(--comic-teal);
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid var(--comic-navy);
+  box-shadow: 2px 2px 0 rgba(4, 56, 74, 0.18);
+}
