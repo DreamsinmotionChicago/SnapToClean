@@ -29,7 +29,6 @@ export default function PaperShader({
     <div className={`${baseStyles} ${className}`}>
       <PaperTexture
         scale={1.2}
-        opacity={0.6}
         className="w-full h-full"
       />
     </div>
