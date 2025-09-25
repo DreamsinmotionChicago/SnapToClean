@@ -3,6 +3,7 @@ import React, { useMemo, useState } from 'react';
 import { BRAND, COPY } from '@/lib/config';
 import PhotoUploader from '@/components/PhotoUploader';
 import ServiceAreaMap from '@/components/ServiceAreaMap';
+import PaperShader from '@/components/PaperShader';
 import { estimateRange } from '@/lib/pricing';
 import { fbTrack, gaTrack } from '@/lib/pixel';
 
@@ -98,28 +99,34 @@ export default function Page() {
   return (
     <div className="space-y-8 md:space-y-12">
       {/* HERO */}
-      <section className="hero-gradient space-y-6 px-6 py-10 text-center">
-        <div className="comic-panel mx-auto inline-flex items-center gap-2 rounded-full bg-[#83f2c5] px-4 py-2 text-sm font-extrabold uppercase text-[#04384a]">
+      <section className="hero-gradient space-y-6 px-6 py-10 text-center relative overflow-hidden">
+        <PaperShader variant="paper" className="rounded-[36px]" />
+        <div className="comic-panel mx-auto inline-flex items-center gap-2 rounded-full bg-[#83f2c5] px-4 py-2 text-sm font-extrabold uppercase text-[#04384a] relative z-10">
           ⚡ Same-day junk justice anywhere in Chicago
         </div>
-        <h1 className="comic-outline mx-auto max-w-3xl text-4xl font-bold uppercase text-[#04384a] md:text-6xl">{COPY.heroTitle}</h1>
-        <p className="mx-auto max-w-2xl text-base font-semibold text-[#04384a]/85 md:text-lg">
+        <h1 className="comic-outline mx-auto max-w-3xl text-4xl font-bold uppercase text-[#04384a] md:text-6xl relative z-10">{COPY.heroTitle}</h1>
+        <p className="mx-auto max-w-2xl text-base font-semibold text-[#04384a]/85 md:text-lg relative z-10">
           {COPY.heroSub} Snap To Clean brings the muscle, the trucks, and the good vibes — you just point at the clutter.
         </p>
-        <div className="comic-panel mx-auto inline-block rounded-2xl bg-white px-5 py-3 text-sm font-bold uppercase text-[#04384a]">
+        <div className="comic-panel mx-auto inline-block rounded-2xl bg-white px-5 py-3 text-sm font-bold uppercase text-[#04384a] relative z-10">
           💡 {COPY.truckSizeNote}
         </div>
       </section>
 
       {/* PRICING TABLE */}
-      <section className="card pricing-highlight">
-        <div className="mb-6 flex flex-wrap items-center gap-3 text-white">
+      <section className="card pricing-highlight relative overflow-hidden">
+        <PaperShader
+          variant="grain"
+          colors={['#04384a', '#0fa3b1', '#2ec4b6']}
+          className="rounded-[32px] opacity-30"
+        />
+        <div className="mb-6 flex flex-wrap items-center gap-3 text-white relative z-10">
           <div className="comic-panel inline-flex items-center gap-2 rounded-full bg-[#0fa3b1] px-4 py-2 text-sm font-extrabold uppercase text-white">
             💰 Transparent Pricing
           </div>
           <span className="inline-flex items-center rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase text-white/90">No surprises • Tax & dump fees included</span>
         </div>
-        <div className="mb-5 grid grid-cols-2 gap-4 text-center md:grid-cols-5">
+        <div className="mb-5 grid grid-cols-2 gap-4 text-center md:grid-cols-5 relative z-10">
           {[
             { label: '1/8 Truck', price: '$150' },
             { label: '1/4 Truck', price: '$250' },
@@ -136,22 +143,23 @@ export default function Page() {
             </div>
           ))}
         </div>
-        <p className="text-sm font-semibold uppercase text-white/90">Minimum <strong>$125</strong>. Heavy materials priced by bed-load. Mattresses & appliances included.</p>
+        <p className="text-sm font-semibold uppercase text-white/90 relative z-10">Minimum <strong>$125</strong>. Heavy materials priced by bed-load. Mattresses & appliances included.</p>
       </section>
 
       <ServiceAreaMap />
 
       {/* FORM */}
-      <form id="estimate-form" onSubmit={onSubmit} className="card space-y-5">
-        <div className="w-full overflow-hidden rounded-full bg-[#04384a]/10">
+      <form id="estimate-form" onSubmit={onSubmit} className="card space-y-5 relative overflow-hidden">
+        <PaperShader variant="paper" className="rounded-[32px] opacity-40" />
+        <div className="w-full overflow-hidden rounded-full bg-[#04384a]/10 relative z-10">
           <div className="h-3 rounded-full progress-bar transition-all duration-500 ease-out" style={{width: `${progress}%`}} />
         </div>
-        <div className="text-center text-sm font-extrabold uppercase text-[#04384a]">
+        <div className="text-center text-sm font-extrabold uppercase text-[#04384a] relative z-10">
           Step {step} of 4 • {Math.round(progress)}% Complete
         </div>
 
         {step === 1 && (
-          <section className="space-y-5">
+          <section className="space-y-5 relative z-10">
             <h3 className="comic-outline text-2xl text-[#04384a]">Where & When?</h3>
             <div className="grid grid-cols-1 gap-3">
               <div>
@@ -183,7 +191,7 @@ export default function Page() {
         )}
 
         {step === 2 && (
-          <section className="space-y-5">
+          <section className="space-y-5 relative z-10">
             <h3 className="comic-outline text-2xl text-[#04384a]">What are we removing?</h3>
             <div className="flex flex-wrap gap-2">
               {['Furniture','Appliances','E‑waste/TVs','Mattresses','Bagged Trash/Boxes','Yard Waste','Construction Debris','Hot Tub','Piano','Other'].map((label)=>{
@@ -234,7 +242,7 @@ export default function Page() {
         )}
 
         {step === 3 && (
-          <section className="space-y-5">
+          <section className="space-y-5 relative z-10">
             <h3 className="comic-outline text-2xl text-[#04384a]">Access & Volume</h3>
             <div className="flex flex-wrap gap-2">
               {['Stairs','Elevator','Curbside','Long carry'].map(label=>{
@@ -269,7 +277,7 @@ export default function Page() {
         )}
 
         {step === 4 && (
-          <section className="space-y-5">
+          <section className="space-y-5 relative z-10">
             <h3 className="comic-outline text-2xl text-[#04384a]">How can we reach you?</h3>
             <div className="grid grid-cols-1 gap-3">
               <div>

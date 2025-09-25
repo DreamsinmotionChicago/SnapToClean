@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.63.1",
+    "@paper-design/shaders-react": "^0.0.54",
     "browser-image-compression": "^2.0.2",
     "heic2any": "^0.0.4",
     "next": "^14.2.4",

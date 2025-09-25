@@ -4,23 +4,25 @@
 
 :root {
   --comic-navy: #04384a;
-  --comic-teal: #0fa3b1;
-  --comic-aqua: #2ec4b6;
-  --comic-mint: #83f2c5;
-  --comic-pop: #b6ff7a;
-  --comic-foam: #e6fff7;
+  --comic-green: #4caf50;
+  --comic-mint: #81c784;
+  --comic-sage: #a5d6a7;
+  --comic-foam: #c8e6c9;
+  --comic-light: #e8f5e8;
+  --comic-pop: #66bb6a;
+  --comic-accent: #2e7d32;
 }
 
 body {
   font-feature-settings: 'ss01' 1;
-  font-family: 'Comic Neue', 'Comic Sans MS', 'Segoe UI', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--comic-navy);
-  background-color: var(--comic-foam);
+  background-color: var(--comic-light);
   background-image:
-    linear-gradient(180deg, rgba(15, 163, 177, 0.18), rgba(46, 196, 182, 0.12)),
-    radial-gradient(circle at 25% 20%, rgba(131, 242, 197, 0.18) 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, rgba(11, 72, 94, 0.15) 0%, transparent 55%),
-    radial-gradient(circle at 15% 85%, rgba(182, 255, 122, 0.15) 0%, transparent 55%),
+    linear-gradient(180deg, rgba(76, 175, 80, 0.18), rgba(129, 199, 132, 0.12)),
+    radial-gradient(circle at 25% 20%, rgba(165, 214, 167, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(46, 125, 50, 0.15) 0%, transparent 55%),
+    radial-gradient(circle at 15% 85%, rgba(102, 187, 106, 0.15) 0%, transparent 55%),
     repeating-radial-gradient(circle at center, rgba(4, 56, 74, 0.06) 0, rgba(4, 56, 74, 0.06) 1px, transparent 1px, transparent 12px),
     url('/backgrounds/hero-yard.jpg'),
     url('/backgrounds/crew-yard.jpg');
@@ -32,9 +34,9 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Bangers', 'Comic Neue', cursive;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 .card {
@@ -62,14 +64,14 @@ h1, h2, h3, h4 {
   box-shadow: 6px 6px 0 rgba(4, 56, 74, 0.2);
 }
 .btn-primary {
-  background-image: linear-gradient(120deg, var(--comic-teal), var(--comic-pop));
+  background-image: linear-gradient(120deg, var(--comic-green), var(--comic-pop));
   color: var(--comic-navy);
 }
 .btn-primary:hover {
   transform: translate(-2px, -2px) rotate(-1deg);
 }
 .btn-ghost {
-  background: var(--comic-foam);
+  background: var(--comic-light);
   color: var(--comic-navy);
 }
 .btn-ghost:hover {
@@ -78,35 +80,35 @@ h1, h2, h3, h4 {
 
 .sticky-cta {
   position: sticky;
-  bottom: 0;
+  top: 0;
   backdrop-filter: saturate(180%) blur(12px);
-  background: linear-gradient(180deg, rgba(15, 163, 177, 0), rgba(131, 242, 197, 0.92) 60%);
-  padding-top: 0.75rem;
+  background: #c8e6c9;
+  padding: 0.75rem 0;
   z-index: 40;
-  border-top: 4px solid var(--comic-navy);
-  box-shadow: 0 -8px 0 rgba(4, 56, 74, 0.1);
+  border-bottom: 4px solid var(--comic-navy);
+  box-shadow: 0 8px 0 rgba(4, 56, 74, 0.1);
 }
 
 .hero-gradient {
-  background-image: radial-gradient(circle at top left, rgba(131, 242, 197, 0.5), transparent 70%),
-    radial-gradient(circle at top right, rgba(15, 163, 177, 0.4), transparent 65%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(230, 255, 247, 0.92));
+  background-image: radial-gradient(circle at top left, rgba(129, 199, 132, 0.5), transparent 70%),
+    radial-gradient(circle at top right, rgba(76, 175, 80, 0.4), transparent 65%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 245, 232, 0.92));
   border-radius: 36px;
   border: 4px solid var(--comic-navy);
   box-shadow: 12px 12px 0 rgba(4, 56, 74, 0.18);
 }
 
 .pricing-highlight {
-  background-image: radial-gradient(circle at 15% 20%, rgba(131, 242, 197, 0.8), transparent 65%),
-    radial-gradient(circle at 90% 10%, rgba(15, 163, 177, 0.5), transparent 60%),
-    linear-gradient(135deg, rgba(4, 56, 74, 0.95), rgba(15, 163, 177, 0.9));
+  background-image: radial-gradient(circle at 15% 20%, rgba(129, 199, 132, 0.8), transparent 65%),
+    radial-gradient(circle at 90% 10%, rgba(76, 175, 80, 0.5), transparent 60%),
+    linear-gradient(135deg, rgba(4, 56, 74, 0.95), rgba(46, 125, 50, 0.9));
   border: 4px solid var(--comic-navy);
   color: white;
   box-shadow: 12px 12px 0 rgba(4, 56, 74, 0.2);
 }
 
 .progress-bar {
-  background-image: linear-gradient(90deg, var(--comic-teal), var(--comic-pop));
+  background-image: linear-gradient(90deg, var(--comic-green), var(--comic-pop));
   box-shadow: 0 3px 0 rgba(4, 56, 74, 0.25);
 }
 
@@ -120,13 +122,14 @@ h1, h2, h3, h4 {
 .comic-burst {
   display: inline-block;
   padding: 0.65rem 1.5rem;
-  background: linear-gradient(135deg, var(--comic-teal), var(--comic-pop));
+  background: linear-gradient(135deg, var(--comic-green), var(--comic-pop));
   color: var(--comic-navy);
   clip-path: polygon(50% 0%, 65% 20%, 100% 25%, 75% 50%, 100% 75%, 65% 80%, 50% 100%, 35% 80%, 0% 75%, 25% 50%, 0% 25%, 35% 20%);
   border: 4px solid var(--comic-navy);
   box-shadow: 6px 6px 0 rgba(4, 56, 74, 0.18);
-  font-family: 'Bangers', 'Comic Neue', cursive;
-  letter-spacing: 0.05em;
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 

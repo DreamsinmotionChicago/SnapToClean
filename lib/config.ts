@@ -1,7 +1,7 @@
 export const BRAND = {
   name: process.env.NEXT_PUBLIC_BRAND_NAME || process.env.BRAND_NAME || "Snap To Clean",
-  phone: process.env.NEXT_PUBLIC_BRAND_PHONE || process.env.BRAND_PHONE || "+1-000-000-0000",
-  sms: process.env.NEXT_PUBLIC_BRAND_SMS || process.env.BRAND_SMS || "+1-000-000-0000",
+  phone: process.env.NEXT_PUBLIC_BRAND_PHONE || process.env.BRAND_PHONE || "872-306-5170",
+  sms: process.env.NEXT_PUBLIC_BRAND_SMS || process.env.BRAND_SMS || "872-306-5170",
   email: process.env.NEXT_PUBLIC_BRAND_EMAIL || process.env.BRAND_EMAIL || "hello@example.com",
   hqZip: process.env.NEXT_PUBLIC_HQ_ZIP || process.env.HQ_ZIP || "60617",
   bookingLink: process.env.NEXT_PUBLIC_BOOKING_LINK || process.env.BOOKING_LINK || ""
