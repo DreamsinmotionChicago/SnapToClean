@@ -8,20 +8,29 @@
     "start": "next start"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.63.1",
+    "browser-image-compression": "^2.0.2",
+    "heic2any": "^0.0.4",
     "next": "^14.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "zod": "^3.23.8",
-    "browser-image-compression": "^2.0.2",
-    "heic2any": "^0.0.4"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5.3.3",
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
-    "tailwindcss": "^3.4.3",
+    "autoprefixer": "^10.4.17",
     "postcss": "^8.4.33",
-    "autoprefixer": "^10.4.17"
-  }
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.3.3"
+  },
+  "description": "Next.js 14 + TypeScript + Tailwind. Mobile-first questionnaire with HEIC (iPhone) photo upload, instant estimate ranges, sticky mobile CTAs, and basic analytics hooks.",
+  "main": "postcss.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
