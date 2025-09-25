@@ -66,13 +66,20 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="rounded-[28px] bg-white/95 p-6 border-2 border-[#04384a] h-[400px] flex flex-col justify-between w-full">
-                <div className="space-y-4">
+              <div className="rounded-[28px] bg-white/95 p-6 border-2 border-[#04384a] h-[400px] flex flex-col justify-between w-full relative overflow-hidden">
+                <div className="absolute inset-0 rounded-[28px] overflow-hidden">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+                    style={{backgroundImage: 'url(/backgrounds/specialist-bg.jpg?v=1)'}}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/85 via-white/75 to-white/65 rounded-[28px]" />
+                </div>
+                <div className="space-y-4 relative z-10">
                   <div className="text-xl font-bold uppercase tracking-wide text-[#04384a]">Talk to a junk specialist</div>
                   <div className="text-4xl font-bold text-[#4caf50]">{BRAND.phone}</div>
                   <p className="text-lg font-semibold text-[#04384a]">Fast estimates • Same-day service • Licensed & insured</p>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 relative z-10">
                   {primaryCtas.map(({ href, label, style }) => (
                     <a key={label} href={href} className={`btn ${style} w-full text-center text-lg py-4 px-6`}>
                       {label}
@@ -113,18 +120,25 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              <div className="self-start rounded-[28px] bg-white/95 p-6 border-2 border-[#04384a]">
-                <div className="text-sm font-bold uppercase tracking-wide text-[#04384a]">Talk to a junk specialist</div>
-                <div className="mt-2 text-2xl font-bold text-[#4caf50]">{BRAND.phone}</div>
-                <p className="mt-2 text-sm font-semibold text-[#04384a]">Fast estimates • Same-day service • Licensed & insured</p>
-                <div className="mt-4 flex flex-col gap-2">
+              <div className="self-start rounded-[28px] bg-white/95 p-6 border-2 border-[#04384a] relative overflow-hidden">
+                <div className="absolute inset-0 rounded-[28px] overflow-hidden">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+                    style={{backgroundImage: 'url(/backgrounds/specialist-bg.jpg?v=1)'}}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/85 via-white/75 to-white/65 rounded-[28px]" />
+                </div>
+                <div className="text-sm font-bold uppercase tracking-wide text-[#04384a] relative z-10">Talk to a junk specialist</div>
+                <div className="mt-2 text-2xl font-bold text-[#4caf50] relative z-10">{BRAND.phone}</div>
+                <p className="mt-2 text-sm font-semibold text-[#04384a] relative z-10">Fast estimates • Same-day service • Licensed & insured</p>
+                <div className="mt-4 flex flex-col gap-2 relative z-10">
                   {primaryCtas.map(({ href, label, style }) => (
                     <a key={label} href={href} className={`btn ${style} w-full text-center`}>
                       {label}
                     </a>
                   ))}
                 </div>
-                <div className="mt-4 rounded-[18px] border-2 border-[#04384a] bg-[#b6ff7a] px-4 py-3 text-xs font-bold uppercase text-[#04384a]">
+                <div className="mt-4 rounded-[18px] border-2 border-[#04384a] bg-[#b6ff7a] px-4 py-3 text-xs font-bold uppercase text-[#04384a] relative z-10">
                   ⏱️ Service hours: Mon–Sat 7a–7p • Sun 9a–4p
                 </div>
               </div>
