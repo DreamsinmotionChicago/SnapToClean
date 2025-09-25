@@ -22,7 +22,12 @@ export default function Header() {
           {/* Mobile Layout */}
           <div className="flex flex-col gap-4 text-center lg:hidden">
             <div className="space-y-4 text-center">
-              <div className="text-3xl font-bold uppercase tracking-wide text-white">{BRAND.name}</div>
+              <div className="text-3xl font-bold uppercase tracking-wide text-white relative">
+                <span className="inline-block transform -rotate-2 bg-gradient-to-r from-[#83f2c5] to-[#0fa3b1] bg-clip-text text-transparent drop-shadow-lg">
+                  {BRAND.name}
+                </span>
+                <div className="absolute -top-1 -right-1 text-2xl animate-bounce">⚡</div>
+              </div>
               <div className="flex justify-center">
                 <Image src="/brand/hero-image.png" alt="Snap To Clean hero" width={300} height={150} className="rounded-lg" />
               </div>
@@ -43,7 +48,13 @@ export default function Header() {
           {/* Desktop Layout */}
           <div className="hidden lg:block">
             <div className="text-center mb-6">
-              <div className="text-6xl font-bold uppercase tracking-wide text-white">{BRAND.name}</div>
+              <div className="text-6xl font-bold uppercase tracking-wide text-white relative">
+                <span className="inline-block transform -rotate-1 bg-gradient-to-r from-[#83f2c5] via-[#0fa3b1] to-[#2ec4b6] bg-clip-text text-transparent drop-shadow-2xl">
+                  {BRAND.name}
+                </span>
+                <div className="absolute -top-2 -right-4 text-4xl animate-bounce">⚡</div>
+                <div className="absolute -bottom-2 -left-2 text-3xl animate-pulse">💥</div>
+              </div>
               <div className="text-2xl font-semibold uppercase text-white/90 mt-2">Chicago junk removal heroes on call</div>
             </div>
 
