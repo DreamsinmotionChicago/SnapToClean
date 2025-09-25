@@ -15,8 +15,8 @@ export default function StickyCTA() {
     <div className="sticky-cta">
       <div className="container mx-auto">
         <div className="flex items-center gap-3">
-          <div className="relative flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-[20px] bg-transparent p-2">
-            <Image src="/brand/logo-green.png" alt={`${BRAND.name} logo`} fill sizes="80px" style={{ objectFit: 'contain' }} />
+          <div className="relative flex h-28 w-28 md:h-32 md:w-32 flex-shrink-0 items-center justify-center rounded-[20px] bg-transparent p-2">
+            <Image src="/brand/logo-green.png" alt={`${BRAND.name} logo`} fill sizes="(max-width: 768px) 112px, 128px" style={{ objectFit: 'contain' }} />
           </div>
           <div className="relative flex-1">
             <button

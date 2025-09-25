@@ -143,7 +143,7 @@ export default function Page() {
             </div>
           ))}
         </div>
-        <p className="text-sm font-semibold uppercase text-white/90 relative z-10">Minimum <strong>$125</strong>. Heavy materials priced by bed-load. Mattresses & appliances included.</p>
+        <p className="text-sm font-semibold uppercase text-white/90 relative z-10">Minimum <strong>$125</strong>. Heavy materials priced by bed-load. Mattresses & appliances cost extra.</p>
       </section>
 
       <ServiceAreaMap />
